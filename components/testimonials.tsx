@@ -1,17 +1,5 @@
-import TestimonialCard from "@/components/testimonialCard";
+import Carousel from "./Carousel";
 
-const data = [
-  {
-    text: "It's rare to find a developer who has such a keen eye for design. Lan Anh brought our Figma designs to life with pixel-perfect accuracy and added insightful animations that enhanced the user experience.",
-    name: "مدري المدري",
-    field: "Marketing Specialist",
-  },
-  {
-    text: "لقد كانت تجربتي رائعة للغاية! الخدمة كانت ممتازة، والفريق تعامل باحترافية عالية واهتمام بالتفاصيل. أشعر بالرضا الكامل عن النتيجة النهائية، وأنصح الجميع بالتعامل معهم دون تردد.",
-    name: "فيصل الحربي",
-    field: "تسويق",
-  },
-];
 export default function Testimonials() {
   return (
     <div className="flex flex-col gap-6 py-10">
@@ -34,7 +22,7 @@ export default function Testimonials() {
         </svg>
       </div>
       <div className="flex gap-4">
-        {data.map((item) => {
+        {/* {data.map((item) => {
           return (
             <TestimonialCard
               key={item.name}
@@ -43,7 +31,8 @@ export default function Testimonials() {
               field={item.field}
             />
           );
-        })}
+        })} */}
+        <Carousel />
       </div>
     </div>
   );

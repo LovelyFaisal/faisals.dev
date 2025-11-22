@@ -31,7 +31,7 @@ export default function ContactButtons() {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex gap-4"
+      className="gap-4 flex flex-col md:flex-row"
       variants={variants}
     >
       <motion.div variants={childvariant}>

@@ -1,8 +1,6 @@
 "use client";
 import EmblaCarousel from "@/components/EmblaCarousel";
-
 import { EmblaOptionsType } from "embla-carousel";
-
 const OPTIONS: EmblaOptionsType = {
   align: "start",
   direction: "rtl",
@@ -10,9 +8,9 @@ const OPTIONS: EmblaOptionsType = {
 };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-export default function Page() {
+export default function Carousel() {
   return (
-    <div className="container theme-dark">
+    <div className="theme-dark">
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </div>
   );

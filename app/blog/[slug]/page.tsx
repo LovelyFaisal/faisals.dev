@@ -1,7 +1,16 @@
 import blogs from "@/.velite/blogs.json";
 import { notFound } from "next/navigation";
 import AnimatedItem from "@/components/animatedItem";
-import MDXContent from "@/components/MDXContent";
+import Category from "@/components/morelayout";
+import Link from "next/link";
+import Heading from "@/components/heading";
+import { IoCopyOutline } from "react-icons/io5";
+import { FaXTwitter } from "react-icons/fa6";
+import CopyButton from "@/components/copyButton";
+import { FaLinkedinIn } from "react-icons/fa";
+
+import type { Metadata } from "next";
+
 interface BlogProps {
   params: Promise<{ slug: string }>;
 }
@@ -10,9 +19,26 @@ function getBlogBySlug(slug: string) {
   return blogs.find((blog) => blog.slug === slug);
 }
 
+export async function generateMetadata({
+  params,
+}: BlogProps): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = getBlogBySlug(slug);
+  if (!blog) {
+    return {};
+  }
+
+  return {
+    title: `${blog.title} - فيصل الحربي`,
+  };
+}
+
 export default async function Page({ params }: BlogProps) {
   const { slug } = await params;
   const blog = getBlogBySlug(slug);
+
+  // const siteUrl = `https://localhost:3000/blog/${blog?.slug}`;
+  // const shareLink = `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
 
   if (!blog) {
     notFound();
@@ -23,7 +49,6 @@ export default async function Page({ params }: BlogProps) {
     month: "long",
     day: "numeric",
   });
-
   return (
     <>
       <div className="container">
@@ -45,9 +70,9 @@ export default async function Page({ params }: BlogProps) {
         </div>
 
         <AnimatedItem delay={0.4}>
-          <div
-            className="
-    prose
+          <div className="flex gap-12">
+            <div
+              className="prose
     prose-h1:text-3xl
     prose-h1:font-normal
     prose-h2:text-lg
@@ -58,10 +83,36 @@ export default async function Page({ params }: BlogProps) {
     dark:prose-invert
     pt-4
     "
-          >
-            <div dangerouslySetInnerHTML={{ __html: blog.body }}></div>
+            >
+              <div dangerouslySetInnerHTML={{ __html: blog.body }}></div>
+            </div>
+            <div className=" flex flex-col gap-2.5">
+              <CopyButton />
+              <Link
+                href="test"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#171717] hover:bg-[#212121] transition-colors w-[32px] h-[32px] flex items-center justify-center rounded-lg"
+              >
+                <FaXTwitter size={16} />
+              </Link>
+              <Link
+                href="test"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#171717] hover:bg-[#212121] transition-colors w-[32px] h-[32px] flex items-center justify-center rounded-lg"
+              >
+                <FaLinkedinIn size={16} />
+              </Link>
+            </div>
           </div>
         </AnimatedItem>
+        <div className="flex flex-col gap-6 pt-20 pb-16">
+          <Link href="/blog">
+            <Heading title="المزيد من المقالات" />
+          </Link>
+          <Category category={blog.category.slug} currentSlug={blog.slug} />
+        </div>
       </div>
     </>
   );
