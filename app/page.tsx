@@ -1,14 +1,18 @@
 import Hero from "@/components/hero";
 import Articles from "@/components/articles";
 import Testimonials from "../components/testimonials";
-import Products from "./products";
+import Skills from "./Skills";
+import product from "./products";
+import Projects from "./projects";
+
 export default function Home() {
   return (
     <div className="container">
       <Hero />
       <Articles />
-      <Products />
-      <Testimonials />
+      <Skills />
+      <Projects />
+      {/* <Testimonials /> */}
     </div>
 
     // <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">

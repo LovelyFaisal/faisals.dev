@@ -117,14 +117,21 @@ export default function Footer() {
         </div>
         <div className="flex gap-2.5">
           <Link
-            href="https://nextjs.org"
+            href="https://github.com/LovelyFaisal"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1 hover:opacity-75 transition-opacity"
           >
             <FaGithub size={16} />
           </Link>
-          <FaLinkedin size={16} />
+          <Link
+            href="https://www.linkedin.com/in/faisalalharbi9/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 hover:opacity-75 transition-opacity"
+          >
+            <FaLinkedin size={16} />
+          </Link>
           <FaInstagram size={16} />
         </div>
       </div>

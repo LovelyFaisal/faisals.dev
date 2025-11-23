@@ -26,7 +26,7 @@ export default function Button({ title, subtitle }: Button) {
       whileTap={{ scale: 0.99 }}
       // transition={{ type: "spring", stiffness: 500, damping: 20 }} // smooth effect
     >
-      <div className="bg-[#171717] py-3 px-4 rounded-xl w-[200px] border border-[#1c1c1c] hover:border-[#292929] transition-colors duration-300 leading-5 flex gap-2.5 group">
+      <div className="bg-[#171717] py-3 px-4 rounded-xl md:w-[200px] border border-[#1c1c1c] hover:border-[#292929] transition-colors duration-300 leading-5 flex gap-2.5 group">
         <div className="flex flex-col gap-0.5 w-full">
           <p className="text-[#ababab] text-sm tracking-tight">{title}</p>
           <p className="text-[#ededed] text-sm  tracking-tight">{subtitle}</p>

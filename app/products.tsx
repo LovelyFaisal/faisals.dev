@@ -119,7 +119,7 @@ export default function Products() {
   ];
   return (
     <div>
-      <div className="flex flex-col gap-6 py-10">
+      {/* <div className="flex flex-col gap-6 py-10">
         <div className="flex items-center gap-1">
           <h2 className="font-medium text-lg text-[#ededed]">Products</h2>
           <svg
@@ -142,7 +142,7 @@ export default function Products() {
           <ProductCard />
           <ProductCard />
         </div>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-3 gap-4" dir="ltr">
         {skillCategories.map((category) => {

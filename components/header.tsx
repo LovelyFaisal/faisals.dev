@@ -30,7 +30,7 @@ export default function Header() {
               return (
                 <li key={link.name} className="">
                   <Link
-                    className="text-sm text-[#ababab] hover:text-[#ededed] transition-colors tracking-tight py-1 px-3"
+                    className="text-sm text-[#ababab] hover:text-[#ededed] transition-colors tracking-tight py-1 px-2 md:px-3"
                     href={link.href}
                   >
                     {link.name}
