@@ -9,7 +9,7 @@ export default function Projects() {
           <Heading title="مشاريعي" />
         </Link>
       </div>
-      <div className="grid grid-cols-3">
+      <div className="grid gap-6 grid-cols-3">
         <ProjectCard />
         <ProjectCard />
       </div>
