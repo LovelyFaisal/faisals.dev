@@ -2,7 +2,7 @@
 title: "شرح TLS"
 image: "Digital Global Network Map.png"
 publishedAt: 2025-10-5
-isPublished: true
+isPublished: false
 slug: explain-tls
 category:
     name: "شبكات"
@@ -10,14 +10,7 @@ category:
 ---
 
 
-Use the `console.log()` function to print messages in JavaScript.
 
-```javascript
-function greet(name) {
-    console.log("Hello, " + name + "!");
-}
-greet("Faisal");
-```
 السلام عليكم ورحمة الله وبركاته، في حالةٍ واحدةٍ ممكن أن يقوم الـ MITM — الرجل الذي في المنتصف أو الهاكر — بالتلاعب في اتصالك إذا فتحت أي موقع إلكتروني.
 
 يعني أنا الآن كتبت الراجحي.com وحوّلني إلى صفحةٍ أخرى.

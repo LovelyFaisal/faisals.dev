@@ -65,7 +65,9 @@ export default async function Page({
       <AnimatedItem delay={0.3}>
         <div className="grid grid-cols-2 gap-4">
           {filteredblogs.map((blog) => {
-            return <ArticleCard key={blog.slug} blog={blog} />;
+            if (blog.isPublished) {
+              return <ArticleCard key={blog.slug} blog={blog} />;
+            }
           })}
         </div>
       </AnimatedItem>

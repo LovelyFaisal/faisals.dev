@@ -73,6 +73,7 @@ export default async function Page({ params }: BlogProps) {
           <div className="flex gap-12">
             <div
               className="prose
+              md:w-[624px]
     prose-h1:text-3xl
     prose-h1:font-normal
     prose-h2:text-lg

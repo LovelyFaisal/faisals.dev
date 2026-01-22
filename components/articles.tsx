@@ -12,7 +12,9 @@ export default function Articles() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {blogs.map((blog) => {
-          return <ArticleCard key={blog.slug} blog={blog} />;
+          if (blog.isPublished) {
+            return <ArticleCard key={blog.slug} blog={blog} />;
+          }
         })}
       </div>
     </section>

@@ -12,6 +12,7 @@ export default function Projects() {
       <div className="grid gap-6 grid-cols-3">
         <ProjectCard />
         <ProjectCard />
+        <ProjectCard />
       </div>
     </section>
   );
