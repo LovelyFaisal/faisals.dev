@@ -7,7 +7,8 @@ export default function Hero() {
       <div className="text-[28px] leading-9 max-w-[280px] md:max-w-2/5">
         <AnimatedItem delay={0}>
           <h1>
-            الخبير في هندسة وبناء البنية التحتية الخلفية المؤمنة والموثوقة.
+            Expert in designing and building secure, reliable backend
+            infrastructure.
           </h1>
         </AnimatedItem>
       </div>
