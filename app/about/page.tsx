@@ -13,7 +13,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 export default function Page() {
   return (
     <div className="container theme-dark">
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
     </div>
   );
 }

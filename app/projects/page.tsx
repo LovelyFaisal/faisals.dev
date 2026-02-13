@@ -13,7 +13,7 @@ export default function Page() {
             </AnimatedItem>
             <AnimatedItem delay={0.2}>
               <p className="text-base text-[#ababab]">
-                ٦،٤٠٠ خبير عربي يتابعون النشرة البريديّة
+                {/* ٦،٤٠٠ خبير عربي يتابعون النشرة البريديّة */}
               </p>
             </AnimatedItem>
           </div>

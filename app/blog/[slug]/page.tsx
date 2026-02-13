@@ -4,11 +4,11 @@ import AnimatedItem from "@/components/animatedItem";
 import Category from "@/components/morelayout";
 import Link from "next/link";
 import Heading from "@/components/heading";
-import { IoCopyOutline } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 import CopyButton from "@/components/copyButton";
 import { FaLinkedinIn } from "react-icons/fa";
-
+import { MdAccessTime } from "react-icons/md";
+import { CiCalendar } from "react-icons/ci";
 import type { Metadata } from "next";
 
 interface BlogProps {
@@ -44,7 +44,7 @@ export default async function Page({ params }: BlogProps) {
     notFound();
   }
 
-  const publishedAt = new Date(blog.publishedAt).toLocaleDateString("en-US", {
+  const publishedAt = new Date(blog.publishedAt).toLocaleDateString("ar-SA", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -52,20 +52,68 @@ export default async function Page({ params }: BlogProps) {
   return (
     <>
       <div className="container">
-        <div className="pt-[120px] pb-[80px] flex flex-col">
-          <div className="flex flex-col gap-3 pb-5 border-b border-[#1c1c1c]">
+        <div className="py-10 flex flex-col">
+          <div className="flex flex-col pb-6 border-b border-white/5">
             <AnimatedItem delay={0}>
-              <h1 className="text-3xl">{blog.title}</h1>
+              <Link
+                href="/blog"
+                className="flex items-center mb-6 gap-1 hover:opacity-75 transition-opacity group text-primary text-sm"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  className="rotate-180 group-hover:-translate-x-0.5 transition-transform"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.75 9L14.25 9M14.25 9L9 3.75M14.25 9L9 14.25"
+                    className="text-blue-500"
+                    stroke="#2B7EFD"
+                    strokeWidth="1.5"
+                    strokeMiterlimit="10"
+                  />
+                </svg>
+                العودة إلى المقالات
+              </Link>
             </AnimatedItem>
 
-            <div className="flex text-[13px] gap-2">
+            <div className="flex items-center gap-4 mb-4 text-[13.3px] text-[#94A3B8]">
+              <AnimatedItem delay={0.1}>
+                <span className="w-fit bg-[#131316] border border-white/10 px-2 py-1 rounded text-primary font-medium">
+                  {blog.category.name}
+                </span>
+              </AnimatedItem>
+              <AnimatedItem delay={0.2}>
+                <div className="flex gap-1 items-center">
+                  <CiCalendar size={16} />
+                  <span>{publishedAt}</span>
+                </div>
+              </AnimatedItem>
+
+              <AnimatedItem delay={0.3}>
+                <div className="flex gap-1 items-center">
+                  <MdAccessTime />
+                  <span>5 دقائق قراءة</span>
+                </div>
+              </AnimatedItem>
+            </div>
+
+            <AnimatedItem delay={0}>
+              <h1 className="text-3xl md:text-5xl font-bold mb-6">
+                {blog.title}
+              </h1>
+            </AnimatedItem>
+
+            {/* <div className="flex text-[13px] gap-2">
               <AnimatedItem delay={0.3}>
                 <p>{blog.category.name}</p>
               </AnimatedItem>
               <AnimatedItem delay={0.2}>
                 <p>{publishedAt}</p>
               </AnimatedItem>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -73,21 +121,21 @@ export default async function Page({ params }: BlogProps) {
           <div className="flex gap-12">
             <div
               className="prose
-              md:w-[624px]
     prose-h1:text-3xl
     prose-h1:font-normal
-    prose-h2:text-lg
-    prose-h2:text-[#ededed]
-    prose-p:text-[#ababab]
-    prose-li:text-[#ababab]
+    prose-h2:text-[32px]
+    max-w-none
+    prose-h2:text-white
+    prose-h2:mb-4
+    prose-p:text-slate-300
+    prose-li:text-slate-300
     prose-ul:pl-0
     dark:prose-invert
-    pt-4
     "
             >
               <div dangerouslySetInnerHTML={{ __html: blog.body }}></div>
             </div>
-            <div className=" flex flex-col gap-2.5">
+            {/* <div className=" flex flex-col gap-2.5">
               <CopyButton />
               <Link
                 href="test"
@@ -105,7 +153,7 @@ export default async function Page({ params }: BlogProps) {
               >
                 <FaLinkedinIn size={16} />
               </Link>
-            </div>
+            </div> */}
           </div>
         </AnimatedItem>
         <div className="flex flex-col gap-6 pt-20 pb-16">

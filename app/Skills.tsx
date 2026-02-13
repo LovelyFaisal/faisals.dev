@@ -119,15 +119,20 @@ export default function Skills() {
   ];
   return (
     <div className="flex flex-col gap-6 py-10">
-      <div className="flex items-center gap-1 cursor-none">
-        <Heading title="مهاراتي" />
+      <div className="flex items-center gap-1">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-2xl font-bold">المهارات التقنية</h2>
+          <p className="text-[#64748B] text-sm">
+            بنية تحتية متكاملة وأدوات تطوير احترافية
+          </p>
+        </div>
       </div>
       <div className="grid md:grid-cols-3 gap-4" dir="ltr">
         {skillCategories.map((category) => {
           return (
             <div
               key={category.name}
-              className="flex flex-col gap-4 px-4 py-3 rounded-xl bg-[#0f0f0f] border border-[#1c1c1c] hover:border-[#292929] transition-colors duration-300"
+              className="flex flex-col gap-4 px-4 py-3 rounded-xl bg-[#0E0E10] border border-white/5 hover:border-white/20 transition-colors duration-300"
             >
               <div className="flex items-center gap-2">
                 <div className="bg-[#171717] p-2 flex items-center justify-center rounded-lg">
@@ -139,7 +144,7 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex gap-2 justify-center items-center bg-[#171717] py-1.5 px-2 text-[#ababab] rounded-md"
+                    className="flex gap-2 justify-center items-center bg-[#1A1A1C] py-1.5 px-2 text-[#ababab] rounded-md"
                   >
                     <Image
                       alt="Products"
