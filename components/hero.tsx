@@ -30,7 +30,10 @@ export default function Hero() {
         </AnimatedItem>
       </div>
       {/* <ContactButtons /> */}
-      <div className="flex gap-4">
+      <div
+        className="flex flex-col md:flex-row 
+      gap-4"
+      >
         <a
           href=""
           className="bg-blue-500 hover:opacity-80 transition-opacity w-fit rounded-lg py-3 px-6 font-bold text-sm flex items-center gap-2"

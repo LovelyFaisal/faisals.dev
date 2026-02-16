@@ -81,7 +81,7 @@ export default function Footer() {
               rel="noreferrer"
               className="flex items-center gap-1 hover:opacity-75 transition-opacity"
             >
-              <p>Tailwind CSS</p>
+              {/* <p>Tailwind CSS</p>
 
               <svg
                 width="16"
@@ -101,10 +101,10 @@ export default function Footer() {
                     <rect width="16" height="16" fill="white" />
                   </clipPath>
                 </defs>
-              </svg>
+              </svg> */}
             </Link>
           </div>
-          <div className="text-[#ababab] text-sm flex flex-col md:flex-row gap-3 select-none">
+          <div className="text-[#94A3B8] text-sm flex flex-col md:flex-row gap-3 select-none">
             <p>© 2025 فيصل الحربي</p>
             <p className="hidden md:block">.</p>
             <p className="select-text">faisalalharbi9915@gmail.com</p>

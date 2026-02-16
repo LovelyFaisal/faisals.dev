@@ -10,13 +10,13 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { MdAccessTime } from "react-icons/md";
 import { CiCalendar } from "react-icons/ci";
 import type { Metadata } from "next";
-
+export const dynamicParams = false;
 interface BlogProps {
   params: Promise<{ slug: string }>;
 }
 
 function getBlogBySlug(slug: string) {
-  return blogs.find((blog) => blog.slug === slug);
+  return blogs.find((blog) => blog.slug === slug && blog.isPublished);
 }
 
 export async function generateMetadata({
@@ -36,10 +36,8 @@ export async function generateMetadata({
 export default async function Page({ params }: BlogProps) {
   const { slug } = await params;
   const blog = getBlogBySlug(slug);
-
   // const siteUrl = `https://localhost:3000/blog/${blog?.slug}`;
   // const shareLink = `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
-
   if (!blog) {
     notFound();
   }
@@ -95,7 +93,11 @@ export default async function Page({ params }: BlogProps) {
               <AnimatedItem delay={0.3}>
                 <div className="flex gap-1 items-center">
                   <MdAccessTime />
-                  <span>5 دقائق قراءة</span>
+                  <span>
+                    {blog.readingTime.text
+                      .replace("min read", "دقائق قراءة")
+                      .replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[parseInt(d)])}
+                  </span>
                 </div>
               </AnimatedItem>
             </div>
@@ -156,9 +158,10 @@ export default async function Page({ params }: BlogProps) {
             </div> */}
           </div>
         </AnimatedItem>
-        <div className="flex flex-col gap-6 pt-20 pb-16">
+        <div className="flex flex-col gap-6 border-t border-white/5 pt-20 pb-16">
           <Link href="/blog">
             <Heading title="المزيد من المقالات" />
+            {/* <h2 className="font-bold text-2xl">المزيد من ال</h2> */}
           </Link>
           <Category category={blog.category.slug} currentSlug={blog.slug} />
         </div>
@@ -168,5 +171,13 @@ export default async function Page({ params }: BlogProps) {
 }
 
 export function generateStaticParams() {
-  return blogs.map((blog) => ({ slug: blog.slug }));
+  // return blogs
+  //   .filter((blog) => blog.isPublished)
+  //   .map((blog) => ({ slug: blog.slug }));
+
+  return (
+    blogs
+      // .filter((blog) => blog.isPublished)
+      .map((blog) => ({ slug: blog.slug }))
+  );
 }

@@ -9,7 +9,7 @@ export default function Aboutme() {
       </div>
       <section className="py-14" id="about">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          <div className="md:col-span-8 flex flex-col gap-6 order-2 md:order-1">
+          <div className="md:col-span-8 flex flex-col gap-6 md:order-2 order-1">
             <div className="flex flex-col gap-2">
               <h2 className="text-2xl font-bold text-white">من أنا</h2>
               <div className="w-12 h-1 bg-primary rounded-full"></div>

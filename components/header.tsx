@@ -6,6 +6,7 @@ const navLinks = [
   { name: "المقالات", href: "/blog" },
   { name: "المشاريع", href: "/projects" },
   { name: "عن فيصل", href: "/about" },
+  { name: "تغريدات", href: "/tweets" },
 ];
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
           <div className="flex justify-center items-center size-8 rounded bg-primary/20">
             <MdTerminal size={24} className="text-primary" />
           </div>
-          فيصل الحربي
+          <span className="hidden md:inline">فيصل الحربي</span>
           {/* <Image
             className={"h-8 w-8 rounded-full object-cover"}
             src={"/static/avatar.jpeg"}
@@ -62,7 +63,7 @@ export default function Header() {
             })}
           </ul>
         </nav>
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 hidden md:flex justify-end">
           <div className="w-fit">
             <ContactButton title="تواصل معي" />
           </div>

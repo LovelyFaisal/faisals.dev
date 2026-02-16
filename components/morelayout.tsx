@@ -1,5 +1,6 @@
 import blogs from "@/.velite/blogs.json";
 import ArticleCard from "./articleCard";
+import ArticleCard2 from "./articleCard2";
 
 export default function Category({
   category,
@@ -9,13 +10,15 @@ export default function Category({
   currentSlug: string;
 }) {
   const categoryBlogs = blogs.filter(
-    (blog) => blog.category.slug === category && blog.slug !== currentSlug
+    (blog) => blog.category.slug === category && blog.slug !== currentSlug,
   );
-
+  const newBlogs = blogs.filter(
+    (blog) => blog.isPublished && blog.slug !== currentSlug,
+  );
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {categoryBlogs.map((blog) => {
-        return <ArticleCard key={blog.slug} blog={blog} />;
+    <div className="divide-y divide-white/[0.03]">
+      {newBlogs.map((blog) => {
+        return <ArticleCard2 key={blog.slug} blog={blog} />;
       })}
     </div>
   );

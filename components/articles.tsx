@@ -3,6 +3,7 @@ import blogs from "@/.velite/blogs.json";
 import Link from "next/link";
 import Heading from "./heading";
 import ArticleCard2 from "./articleCard2";
+import readingTime from "reading-time";
 export default function Articles() {
   return (
     <section className="flex flex-col gap-10 py-10">

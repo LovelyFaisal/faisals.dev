@@ -2,11 +2,11 @@
 title: "افضل نضام تشغيل للمبرمجين"
 image: "Digital Global Network Map.png"
 publishedAt: 2025-10-6
-isPublished: false
+isPublished: true
 slug: tls2
 category:
-    name: "شبكات"
-    slug: "networking"
+    name: "نظم تشغيل"
+    slug: "os"
 ---
 
 في الفترة انتشرت فكرة بين الناس أن المبرمج "الحقيقي" يستخدم لينكس لأنه نظام مفتوح المصدر وفيه حرية التعديل والأمان، ولأنه مايكروسوفت تسرق بياناتك.

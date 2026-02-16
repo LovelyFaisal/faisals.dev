@@ -1,5 +1,6 @@
 import { defineConfig, s } from "velite";
 import rehypeShiki from '@shikijs/rehype'
+import readingTime from "reading-time";
 
 // Define the blog schema
 const blog = s
@@ -19,6 +20,7 @@ const blog = s
     return {
       ...data,
       url: `/blogs/${data.slug}`,
+      readingTime: readingTime(data.body)
       //   toc: headings,
     };
   });
