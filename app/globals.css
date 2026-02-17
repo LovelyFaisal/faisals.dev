@@ -15,11 +15,16 @@
   /* media query if larger than 768 24px if less 16 */
  
 }
-
+.responsive-columns {
+  columns: 1;
+}
 @media (min-width: 48rem) {
   .container {
     max-width: 820px;
     padding-inline: 10px;
+  }
+  .responsive-columns {
+    columns: 2;
   }
 }
 

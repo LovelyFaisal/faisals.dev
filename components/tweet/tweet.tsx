@@ -27,7 +27,6 @@ export const TweetContent = async ({ id, noTilt, onError }: Props) => {
   }
 
   // return <DubTweet tweet={enrichTweet(tweet)} noTilt={noTilt} />
-  console.log(enrichTweet(tweet));
   return <EmbeddedTweet tweet={enrichTweet(tweet)} />;
 };
 

@@ -29,7 +29,7 @@ export default function Page() {
         </div>
       </div>
       <AnimatedItem delay={0.3}>
-        <div className="gap-4 mb-6 h-auto" style={{ columns: 2 }}>
+        <div className="gap-4 mb-6 h-auto responsive-columns">
           {tweets.map((tweet) => {
             return <Tweet key={tweet} id={tweet} />;
           })}
