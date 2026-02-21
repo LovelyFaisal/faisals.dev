@@ -2,7 +2,7 @@
 title: "شرح TLS"
 image: "Digital Global Network Map.png"
 publishedAt: 2025-10-5
-isPublished: true
+isPublished: false
 slug: explain-tls
 category:
     name: "شبكات"
