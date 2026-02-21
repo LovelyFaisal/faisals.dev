@@ -47,6 +47,6 @@ export default defineConfig({
   output: {
     //data: ".velite/generated",
     //assets: "public/blogs",
-    clean: true,
+    // clean: true,
   },
 });
