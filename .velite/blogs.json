@@ -29,7 +29,7 @@
     "title": "أول مقالة لي",
     "publishedAt": "2025-12-05T21:00:00.000Z",
     "isPublished": true,
-    "body": "<h2>هذه أول مقالة لي</h2>\n<p>السلام عليكم ورحمة الله وبركاته\r\nاما بعد:</p>\n<p>يقول الشاعر حياكم الله في مجلسن مافيه نفسن ثقيلة</p>\n<p>مكر مفر مقبل مدبر معاً كجلمود صخر حطه السيل من علي.</p>\n<p>testing integration nextjs with velite\r\nتجربة اخرى</p>",
+    "body": "<h2>هذه أول مقالة لي</h2>\n<p>السلام عليكم ورحمة الله وبركاته\r\nاما بعد:</p>\n<p>يقول الشاعر حياكم الله في مجلسن مافيه نفسن ثقيلة</p>\n<p>مكر مفر مقبل مدبر معاً كجلمود صخر حطه السيل من علي.</p>\n<p>testing integration nextjs with velite\r\nتجربة اخرى\r\nتجربة اخرى2</p>",
     "image": {
       "src": "/static/Digital Global Network Map-0a1f992f.png",
       "height": 844,
@@ -46,9 +46,9 @@
     "url": "/blogs/first-article",
     "readingTime": {
       "text": "1 min read",
-      "minutes": 0.19,
-      "time": 11400,
-      "words": 38
+      "minutes": 0.2,
+      "time": 12000,
+      "words": 40
     }
   },
   {
