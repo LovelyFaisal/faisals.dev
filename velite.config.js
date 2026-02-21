@@ -6,6 +6,7 @@ import readingTime from "reading-time";
 const blog = s
   .object({
     title: s.string(),
+    description: s.string().optional(),
     publishedAt: s.isodate(),
     isPublished: s.boolean().default(true),
     body: s.markdown(),
@@ -46,6 +47,6 @@ export default defineConfig({
   output: {
     //data: ".velite/generated",
     //assets: "public/blogs",
-    // clean: true,
+    clean: true,
   },
 });

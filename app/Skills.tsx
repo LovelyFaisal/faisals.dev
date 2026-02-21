@@ -4,7 +4,6 @@ import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { TbApi } from "react-icons/tb";
 import { FaServer } from "react-icons/fa";
 import { BsStack } from "react-icons/bs";
-import Heading from "@/components/heading";
 import Image from "next/image";
 export default function Skills() {
   const skillCategories = [

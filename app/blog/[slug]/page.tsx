@@ -107,15 +107,11 @@ export default async function Page({ params }: BlogProps) {
                 {blog.title}
               </h1>
             </AnimatedItem>
-
-            {/* <div className="flex text-[13px] gap-2">
-              <AnimatedItem delay={0.3}>
-                <p>{blog.category.name}</p>
-              </AnimatedItem>
-              <AnimatedItem delay={0.2}>
-                <p>{publishedAt}</p>
-              </AnimatedItem>
-            </div> */}
+            <p className="text-[#94A3B8] ">
+              نظرة شاملة على التطورات الأخيرة في لغة CSS وكيف بدأت الميزات
+              الجديدة تنافس أطر العمل التقليدية وتغير طريقة تفكيرنا فيsسس
+              التصميم.
+            </p>
           </div>
         </div>
 
@@ -132,6 +128,7 @@ export default async function Page({ params }: BlogProps) {
     prose-p:text-slate-300
     prose-li:text-slate-300
     prose-ul:pl-0
+    pb-5
     dark:prose-invert
     "
             >

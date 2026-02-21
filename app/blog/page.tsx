@@ -26,7 +26,7 @@ export default function Page() {
         </div>
       </div>
       <AnimatedItem delay={0.3}>
-        <div className="flex gap-2 mb-4 justify-end">
+        <div className="flex gap-2 mb-4 justify-end flex-wrap">
           <Link
             href="/blog"
             className="px-5 py-2 rounded-full bg-primary text-white text-sm font-medium border border-primary shadow-lg shadow-primary/20 transition-all"
@@ -60,7 +60,7 @@ export default function Page() {
       </AnimatedItem> */}
 
       <AnimatedItem delay={0.3}>
-        <div className="divide-y divide-white/[0.03]">
+        <div className="divide-y divide-white/[0.03] pb-10">
           {blogs.map((blog) => {
             if (blog.isPublished) {
               return <ArticleCard2 key={blog.slug} blog={blog} />;

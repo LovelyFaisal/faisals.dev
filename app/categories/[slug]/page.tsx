@@ -51,7 +51,7 @@ export default async function Page({
       </div>
 
       <AnimatedItem delay={0.3}>
-        <div className="flex gap-2 mb-4 justify-end">
+        <div className="flex gap-2 mb-4 justify-end flex-wrap">
           <Link
             className="px-5 py-2 rounded-full bg-[#131316] text-white text-sm font-medium border border-white/5 hover:border-white/20 transition-all"
             href="/blog"
@@ -98,7 +98,7 @@ export default async function Page({
       </AnimatedItem> */}
 
       <AnimatedItem delay={0.3}>
-        <div className="divide-y divide-white/[0.03]">
+        <div className="divide-y divide-white/[0.03] pb-10">
           {filteredblogs.map((blog) => {
             if (blog.isPublished) {
               return <ArticleCard2 key={blog.slug} blog={blog} />;
