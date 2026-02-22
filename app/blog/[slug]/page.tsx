@@ -36,11 +36,14 @@ export async function generateMetadata({
 export default async function Page({ params }: BlogProps) {
   const { slug } = await params;
   const blog = getBlogBySlug(slug);
-  // const siteUrl = `https://localhost:3000/blog/${blog?.slug}`;
-  // const shareLink = `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
   if (!blog) {
     notFound();
   }
+  const encodedText = encodeURIComponent(`عجبني هذا المقال: ${blog.title}`);
+  const encodedUrl = encodeURIComponent(
+    `https://faisal9.com/blog/${blog.slug}`,
+  );
+  const shareLink = `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
 
   const publishedAt = new Date(blog.publishedAt).toLocaleDateString("ar-SA", {
     year: "numeric",
@@ -134,28 +137,21 @@ export default async function Page({ params }: BlogProps) {
             >
               <div dangerouslySetInnerHTML={{ __html: blog.body }}></div>
             </div>
-            {/* <div className=" flex flex-col gap-2.5">
-              <CopyButton />
-              <Link
-                href="test"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#171717] hover:bg-[#212121] transition-colors w-[32px] h-[32px] flex items-center justify-center rounded-lg"
-              >
-                <FaXTwitter size={16} />
-              </Link>
-              <Link
-                href="test"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-[#171717] hover:bg-[#212121] transition-colors w-[32px] h-[32px] flex items-center justify-center rounded-lg"
-              >
-                <FaLinkedinIn size={16} />
-              </Link>
-            </div> */}
           </div>
         </AnimatedItem>
-        <div className="flex flex-col gap-6 border-t border-white/5 pt-20 pb-16">
+
+        <div className="flex items-center gap-2 pt-4 border-t border-white/5">
+          <span className="font-bold">شارك المقال:</span>
+          <a
+            href={shareLink}
+            target="_blank"
+            className="bg-[#131316] p-2 border border-white/5 rounded-full transition-colors hover:border-white/10"
+          >
+            <FaXTwitter size={16} />
+          </a>
+        </div>
+
+        <div className="flex flex-col gap-6 pb-16 pt-20">
           <Link href="/blog">
             <Heading title="المزيد من المقالات" />
             {/* <h2 className="font-bold text-2xl">المزيد من ال</h2> */}
@@ -168,13 +164,7 @@ export default async function Page({ params }: BlogProps) {
 }
 
 export function generateStaticParams() {
-  // return blogs
-  //   .filter((blog) => blog.isPublished)
-  //   .map((blog) => ({ slug: blog.slug }));
-
-  return (
-    blogs
-      // .filter((blog) => blog.isPublished)
-      .map((blog) => ({ slug: blog.slug }))
-  );
+  return blogs
+    .filter((blog) => blog.isPublished)
+    .map((blog) => ({ slug: blog.slug }));
 }
