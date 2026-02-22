@@ -1,5 +1,6 @@
 ---
 title: "افضل نضام تشغيل للمبرمجين"
+description: "نظرة شاملة على التطورات الأخيرة في لغة CSS وكيف بدأت الميزات الجديدة تنافس أطر العمل التقليدية وتغير طريقة تفكيرنا"
 image: "Digital Global Network Map.png"
 publishedAt: 2025-10-6
 isPublished: true

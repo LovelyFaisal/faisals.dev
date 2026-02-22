@@ -16,6 +16,10 @@ category:
 
 يقول الشاعر حياكم الله في مجلسن مافيه نفسن ثقيلة
 
+```js
+console.log("welcome to faisal's blog")
+```
+
 مكر مفر مقبل مدبر معاً كجلمود صخر حطه السيل من علي.
 
 testing integration nextjs with velite
