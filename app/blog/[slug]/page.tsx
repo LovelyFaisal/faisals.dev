@@ -31,6 +31,7 @@ export async function generateMetadata({
 
   return {
     title: `${blog.title} - فيصل الحربي`,
+    description: blog.description || "مقالة في مدونة فيصل الحربي",
   };
 }
 
@@ -97,10 +98,7 @@ const ArticleHeader = ({ blog }: { blog: Blog }) => {
         <AnimatedItem delay={0}>
           <h1 className="text-3xl md:text-5xl font-bold mb-6">{blog.title}</h1>
         </AnimatedItem>
-        <p className="text-[#94A3B8] ">
-          نظرة شاملة على التطورات الأخيرة في لغة CSS وكيف بدأت الميزات الجديدة
-          تنافس أطر العمل التقليدية وتغير طريقة تفكيرنا فيsسس التصميم.
-        </p>
+        <p className="text-[#94A3B8]">{blog.description}</p>
       </div>
     </div>
   );
