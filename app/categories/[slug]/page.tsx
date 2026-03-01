@@ -1,6 +1,5 @@
 import blogs from "@/.velite/blogs.json";
 import Link from "next/link";
-import ArticleCard from "@/components/articleCard";
 import AnimatedItem from "@/components/animatedItem";
 import ArticleCard2 from "@/components/articleCard2";
 
@@ -74,33 +73,10 @@ export default async function Page({
               >
                 {category.name}
               </Link>
-
-              // <Link key={category.name} href={`/categories/${category.slug}`}>
-              //   <button
-              //     className={`py-1 px-2.5 rounded-md w-fit cursor-pointer transition-colors ${
-              //       isActive
-              //         ? "bg-[#ff7b0f] text-white" // Active styles
-              //         : "bg-[#2e1e16] text-[#ff7b0f]" // Default styles
-              //     }`}
-              //   >
-              //     <p className="text-base">{category.name}</p>
-              //   </button>
-              // </Link>
             );
           })}
         </div>
       </AnimatedItem>
-
-      {/* <AnimatedItem delay={0.3}>
-        <div className="grid grid-cols-2 gap-4">
-          {filteredblogs.map((blog) => {
-            if (blog.isPublished) {
-              return <ArticleCard key={blog.slug} blog={blog} />;
-            }
-          })}
-        </div>
-      </AnimatedItem> */}
-
       <AnimatedItem delay={0.3}>
         <div className="divide-y divide-white/[0.03] pb-10">
           {filteredblogs.map((blog) => {

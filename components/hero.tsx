@@ -1,18 +1,7 @@
 import AnimatedItem from "./animatedItem";
-import ContactButtons from "./contactButtons";
 import { LuDownload } from "react-icons/lu";
 export default function Hero() {
   return (
-    // <section className="pt-[64px] md:pt-[100px] pb-8 md:pb-16 flex flex-col gap-8">
-    //   <div className="text-[28px] leading-9 max-w-[280px] md:max-w-2/5">
-    //     <AnimatedItem delay={0}>
-    //       <h1 className="text-5xl">
-    //         الخبير في هندسة وبناء البنية التحتية الخلفية المؤمنة والموثوقة.
-    //       </h1>
-    //     </AnimatedItem>
-    //   </div>
-    //   <ContactButtons />
-    // </section>
     <section className="pt-[64px] md:pt-24 md:pb-24 pb-8 flex flex-col gap-8">
       <div className="max-w-[280px] md:max-w-[62%] flex flex-col gap-4">
         <AnimatedItem delay={0}>
@@ -29,7 +18,6 @@ export default function Hero() {
           </p>
         </AnimatedItem>
       </div>
-      {/* <ContactButtons /> */}
       <div
         className="flex flex-col md:flex-row 
       gap-4"

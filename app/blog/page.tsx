@@ -1,5 +1,4 @@
 import blogs from "@/.velite/blogs.json";
-import ArticleCard from "../../components/articleCard";
 import Link from "next/link";
 import AnimatedItem from "@/components/animatedItem";
 import ArticleCard2 from "@/components/articleCard2";
@@ -48,19 +47,6 @@ export default function Page() {
           })}
         </div>
       </AnimatedItem>
-
-      {/* old layout */}
-
-      {/* <AnimatedItem delay={0.3}>
-        <div className="grid grid-cols-2 gap-4">
-          {blogs.map((blog) => {
-            if (blog.isPublished) {
-              return <ArticleCard key={blog.slug} blog={blog} />;
-            }
-          })}
-        </div>
-      </AnimatedItem> */}
-
       <AnimatedItem delay={0.3}>
         <div className="divide-y divide-white/[0.03] pb-10">
           {blogs.map((blog) => {
