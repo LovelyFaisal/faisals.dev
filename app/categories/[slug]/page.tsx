@@ -5,7 +5,11 @@ import AnimatedItem from "@/components/animatedItem";
 import ArticleCard2 from "@/components/articleCard2";
 
 const categories = [
-  ...new Map(blogs.map((blog) => [blog.category.slug, blog.category])).values(),
+  ...new Map(
+    blogs
+      .filter((blog) => blog.isPublished)
+      .map((blog) => [blog.category.slug, blog.category]),
+  ).values(),
 ];
 
 export async function generateMetadata({

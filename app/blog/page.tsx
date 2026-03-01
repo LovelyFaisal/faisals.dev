@@ -7,7 +7,9 @@ import ArticleCard2 from "@/components/articleCard2";
 export default function Page() {
   const categories = [
     ...new Map(
-      blogs.map((blog) => [blog.category.slug, blog.category]),
+      blogs
+        .filter((blog) => blog.isPublished)
+        .map((blog) => [blog.category.slug, blog.category]),
     ).values(),
   ];
   return (
