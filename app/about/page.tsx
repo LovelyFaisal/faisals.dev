@@ -1,22 +1,11 @@
 "use client";
-import Education from "@/components/education";
-import EmblaCarousel from "@/components/EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
-import Skills from "../Skills";
-
-const OPTIONS: EmblaOptionsType = {
-  align: "start",
-  direction: "rtl",
-  loop: true,
-};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import AnimatedItem from "@/components/animatedItem";
 export default function Page() {
   return (
     <div className="container theme-dark">
-      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
-      <div
-        className="prose
+      <AnimatedItem delay={0}>
+        <div
+          className="prose
     prose-h1:text-3xl
     prose-h1:font-normal
     prose-h2:text-[32px]
@@ -32,49 +21,50 @@ export default function Page() {
     pb-5
     dark:prose-invert
     "
-      >
-        <div>
-          <h2>فيصل الحربي</h2>
-          <p>
-            ما بدأت رحلتي بين صفحات الكتب ولا في قاعات المحاضرات؛ بدأت وعمري 12
-            سنة وأنا أطقطق على كود Lua عشان أبني{" "}
-            <a
-              href="https://www.youtube.com/watch?v=OvvS9cpXKdg&t=5s"
-              target="_blank"
-            >
-              سيرفري الخاص في قراند .
-            </a>
-            كنت أبي أشوف خيالي يتحول لواقع قدامي، وهناك تعلمت أول درس:
-          </p>
-          <p>"العلم يجي بالممارسة، والخطأ هو أكبر معلم."</p>
-          <p>
-            ثم مررت مع لغة VB.NET اللي علمتني كيف أحوّل الفكرة لبرنامج ملموس
-            وصولاً اليوم متخصص في تطوير الويب
-          </p>
-          <p className="py-4">
-            أؤمن تماماً إن المعرفة حق مشاع لكل إنسان، مو حكر على أحد. عشان كذا
-            فتحت قناتي على اليوتيوب أقدم محتوى حقيقي و أصيل يلهم العرب يتعلمون
-            البرمجه
-          </p>
-          <p>بعض المشاريع التي عملت عليها:</p>
-          <ul>
-            <li>
-              <p>
-                عملت على اول مشروع كبير في 2023 وهو ثيم على منصة سلة صممته ثم
-                برمجته بنفسي واستغرق مني 3 أشهر لانهائه وهو أكبر مشروع عملت عليه
-                ويستخدم الثيم 50 تاجر على منصة سلة الى اليوم.
-              </p>
-            </li>
-            <li>
-              <p>
-                برمجت موقعي الحالي ونشرته مفتوح المصدر كقالب يستطيع المبرمجون
-                يستخدمونه وهو أول قالب موقع شخصي مفتوح المصدر بمميزات عديدة مبني
-                على Next.js باللغة العربية
-              </p>
-            </li>
-          </ul>
+        >
+          <div>
+            <h2>فيصل الحربي</h2>
+            <p>
+              ما بدأت رحلتي بين صفحات الكتب ولا في قاعات المحاضرات؛ بدأت وعمري
+              12 سنة وأنا أطقطق على كود Lua عشان أبني{" "}
+              <a
+                href="https://www.youtube.com/watch?v=OvvS9cpXKdg&t=5s"
+                target="_blank"
+              >
+                سيرفري الخاص في قراند .
+              </a>
+              كنت أبي أشوف خيالي يتحول لواقع قدامي، وهناك تعلمت أول درس:
+            </p>
+            <p>"العلم يجي بالممارسة، والخطأ هو أكبر معلم."</p>
+            <p>
+              ثم مررت مع لغة VB.NET اللي علمتني كيف أحوّل الفكرة لبرنامج ملموس
+              وصولاً اليوم متخصص في تطوير الويب
+            </p>
+            <p className="py-4">
+              أؤمن تماماً إن المعرفة حق مشاع لكل إنسان، مو حكر على أحد. عشان كذا
+              فتحت قناتي على اليوتيوب أقدم محتوى حقيقي و أصيل يلهم العرب يتعلمون
+              البرمجه
+            </p>
+            <p>بعض المشاريع التي عملت عليها:</p>
+            <ul>
+              <li>
+                <p>
+                  عملت على اول مشروع كبير في 2023 وهو ثيم على منصة سلة صممته ثم
+                  برمجته بنفسي واستغرق مني 3 أشهر لانهائه وهو أكبر مشروع عملت
+                  عليه ويستخدم الثيم 50 تاجر على منصة سلة الى اليوم.
+                </p>
+              </li>
+              <li>
+                <p>
+                  برمجت موقعي الحالي ونشرته مفتوح المصدر كقالب يستطيع المبرمجون
+                  يستخدمونه وهو أول قالب موقع شخصي مفتوح المصدر بمميزات عديدة
+                  مبني على Next.js باللغة العربية
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </AnimatedItem>
     </div>
   );
 }

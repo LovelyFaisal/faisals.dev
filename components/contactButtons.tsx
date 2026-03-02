@@ -1,7 +1,7 @@
 "use client";
 import * as motion from "motion/react-client";
 import { Variants } from "framer-motion";
-import Button from "@/components/button";
+import Button from "@/components/ui/button";
 import Link from "next/link";
 
 const variants: Variants = {

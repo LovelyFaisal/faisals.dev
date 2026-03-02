@@ -22,16 +22,6 @@ export default function Testimonials() {
         </svg>
       </div>
       <div className="flex gap-4">
-        {/* {data.map((item) => {
-          return (
-            <TestimonialCard
-              key={item.name}
-              text={`"${item.text}"`}
-              name={item.name}
-              field={item.field}
-            />
-          );
-        })} */}
         <Carousel />
       </div>
     </div>

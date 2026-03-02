@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ContactButton } from "./button";
+import { ContactButton } from "./ui/button";
 import { MdTerminal } from "react-icons/md";
 const navLinks = [
   { name: "المقالات", href: "/blog" },
@@ -21,32 +20,7 @@ export default function Header() {
             <MdTerminal size={24} className="text-primary" />
           </div>
           <span className="hidden md:inline">فيصل الحربي</span>
-          {/* <Image
-            className={"h-8 w-8 rounded-full object-cover"}
-            src={"/static/avatar.jpeg"}
-            width={1199}
-            height={580}
-            alt="meaningful text"
-          /> */}
         </Link>
-
-        {/* <nav className="flex items-center justify-center w-full">
-          <ul className="flex h-full">
-            {navLinks.map((link) => {
-              return (
-                <li key={link.name} className="">
-                  <Link
-                    className="text-sm text-[#64748B] hover:text-[#ededed] transition-colors tracking-tight py-1 px-2 md:px-3"
-                    href={link.href}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav> */}
-
         <nav className="">
           <ul className="flex h-full">
             {navLinks.map((link) => {
