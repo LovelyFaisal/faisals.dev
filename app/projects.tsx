@@ -32,7 +32,7 @@ const projects: Project[] = [
 ];
 export default function Projects() {
   return (
-    <section className="flex flex-col gap-6 py-10">
+    <section className="flex flex-col gap-6 py-10" id="projects">
       <div className="flex flex-col gap-2">
         <h2 className="text-2xl font-bold">المشاريع</h2>
         <p className="text-[#64748B] text-sm">
