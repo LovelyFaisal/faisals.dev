@@ -9,7 +9,6 @@ import CopyButton from "@/components/copyButton";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdAccessTime } from "react-icons/md";
 import { CiCalendar } from "react-icons/ci";
-import { headers } from "next/headers";
 import type { Metadata } from "next";
 import type { Blog } from "@/.velite";
 export const dynamicParams = false;
@@ -110,12 +109,10 @@ export default async function Page({ params }: BlogProps) {
   if (!blog) {
     notFound();
   }
-
-  const headersList = headers();
-  const host = (await headersList).get("host");
-
   const encodedText = encodeURIComponent(`عجبني هذا المقال: ${blog.title}`);
-  const encodedUrl = encodeURIComponent(`https://${host}/blog/${blog.slug}`);
+  const encodedUrl = encodeURIComponent(
+    `https://faisal9.com/blog/${blog.slug}`,
+  );
   const shareLink = `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
 
   return (
