@@ -6,9 +6,8 @@ export default function Hero() {
       <div className="max-w-[280px] md:max-w-[62%] flex flex-col gap-4">
         <AnimatedItem delay={0}>
           <h1 className="text-4xl font-bold leading-[1.2]">
-            الخبير في هندسة وبناء{" "}
-            <span className="text-primary italic">البنية التحتية</span> الخلفية
-            المؤمنة والموثوقة.
+            انا <span className="text-primary italic">فيصل الحربي</span> متخصص
+            في تطوير الويب وبناء الحلول الرقمية
           </h1>
         </AnimatedItem>
         <AnimatedItem delay={0.2}>
