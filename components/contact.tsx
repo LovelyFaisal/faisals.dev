@@ -22,7 +22,7 @@ const contactLinks = [
 ];
 export default function Contact() {
   return (
-    <div>
+    <div id="contact">
       <div className="px-6">
         <div className="h-[1px] bg-[linear-gradient(to_left,transparent,rgba(59,130,246,0.1),transparent)]"></div>
       </div>

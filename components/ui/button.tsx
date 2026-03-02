@@ -43,9 +43,9 @@ export default function Button({ title, subtitle }: Button) {
 export function ContactButton({ title }: { title: string }) {
   return (
     <motion.div whileHover="hover">
-      <Link
+      <a
         className="py-2 pl-3.5 pr-3 flex gap-2 items-center text-[13px] font-medium text-[#ededed] border border-[#292929] hover:border-[#363636] rounded-[10px] hover:bg-[#171717] transition-colors"
-        href={"/contact"}
+        href="#contact"
       >
         {title}
         <motion.div className="flex gap-0.5 h-4 justify-center items-center">
@@ -59,7 +59,7 @@ export function ContactButton({ title }: { title: string }) {
             className="bg-[#ababab] w-[3px] h-[3px] rounded-xs opacity-40"
           ></motion.div>
         </motion.div>
-      </Link>
+      </a>
     </motion.div>
   );
 }
