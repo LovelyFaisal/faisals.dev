@@ -1,11 +1,8 @@
-import Image from "next/image";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaRegHeart } from "react-icons/fa";
-import { FaRegComment } from "react-icons/fa";
 import AnimatedItem from "@/components/animatedItem";
 import { Tweet } from "@/components/tweet";
 
 const tweets = [
+  "2027866444680032260",
   "1654706200838275072",
   "1667758582262120448",
   "1668090775383465984",
