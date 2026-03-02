@@ -3,7 +3,7 @@ import { ContactButton } from "./ui/button";
 import { MdTerminal } from "react-icons/md";
 const navLinks = [
   { name: "المقالات", href: "/blog" },
-  { name: "المشاريع", href: "/projects" },
+  // { name: "المشاريع", href: "/projects" },
   { name: "عن فيصل", href: "/about" },
   { name: "تغريدات", href: "/tweets" },
 ];
@@ -12,6 +12,7 @@ export default function Header() {
   return (
     <header
       className="py-4 border-b border-white/5 bg-[#0A0A0C] sticky top-0 z-10"
+      id="top"
       dir="rtl"
     >
       <div className="container flex gap-2 items-center">
