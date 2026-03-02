@@ -16,15 +16,16 @@ export default function Aboutme() {
             </div>
             <div className="space-y-4">
               <p className="text-base text-slate-300 leading-relaxed font-light">
-                أنا مطور واجهات خلفية وبنية تحتية بخبرة تزيد عن 5 سنوات. شغفي
-                يكمن في ابتكار حلول برمجية تجمع بين الأداء العالي والقابلية
-                للتوسع، مع التركيز العميق على هندسة النظم الموزعة.
+                أنا مهندس برمجيات أركز على بناء حلول تقنية متكاملة؛ أجمع بين قوة
+                المنطق في الأنظمة الخلفية وجمالية التفاعل في الواجهات الأمامية.
+                شغفي يكمن في تطوير برمجيات متناغمة تضمن الأداء العالي والأمان،
+                مع تقديم تجربة مستخدم سلسة وفعالة
               </p>
-              <p className="text-slate-400 text-base-body leading-relaxed">
+              {/* <p className="text-slate-400 text-base-body leading-relaxed">
                 بدأت رحلتي في عالم البرمجة من خلال بناء أنظمة صغيرة، وتطورت
                 لأعمل اليوم مع شركات تقنية رائدة لتطوير منصات رقمية تخدم آلاف
                 المستخدمين يومياً. أؤمن بأن الكود النظيف هو أساس أي منتج ناجح.
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="md:col-span-4 flex flex-col gap-5 border-t md:border-t-0 md:border-r border-white/10 md:pr-8 pt-8 md:pt-0 order-1 md:order-2">
