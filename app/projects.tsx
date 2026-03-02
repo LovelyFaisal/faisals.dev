@@ -17,7 +17,7 @@ const projects: Project[] = [
     image: image1,
     description:
       "ثيم رؤية على منصة سلة هو ثيم متجر إلكتروني حديث ومتجاوب، يعيد تصميم واجهة المستخدم للمتجر الالكتروني بتصميم جذاب ويستهدف متاجر الالكترونيات.",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    tags: ["HTML/CSS", "Twig", "JavaScript", "Tailwind CSS"],
     demo: "https://demostore.salla.sa/dev-jejh5blkrkcrcr5t",
   },
   {
