@@ -111,7 +111,7 @@ export default async function Page({ params }: BlogProps) {
   }
   const encodedText = encodeURIComponent(`عجبني هذا المقال: ${blog.title}`);
   const encodedUrl = encodeURIComponent(
-    `https://faisal9.com/blog/${blog.slug}`,
+    `https://faisals.dev/blog/${blog.slug}`,
   );
   const shareLink = `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
 
