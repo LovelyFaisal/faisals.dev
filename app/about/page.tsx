@@ -22,7 +22,7 @@ export default function Page() {
     prose-h2:text-[32px]
     max-w-none
     prose-h2:text-white
-    prose-a:text-slate-300
+    prose-a:text-primary
     prose-h2:mb-4
     prose-p:text-slate-300
     prose-p:m-0
@@ -63,6 +63,13 @@ export default function Page() {
                 عملت على اول مشروع كبير في 2023 وهو ثيم على منصة سلة صممته ثم
                 برمجته بنفسي واستغرق مني 3 أشهر لانهائه وهو أكبر مشروع عملت عليه
                 ويستخدم الثيم 50 تاجر على منصة سلة الى اليوم.
+              </p>
+            </li>
+            <li>
+              <p>
+                برمجت موقعي الحالي ونشرته مفتوح المصدر كقالب يستطيع المبرمجون
+                يستخدمونه وهو أول قالب موقع شخصي مفتوح المصدر بمميزات عديدة مبني
+                على Next.js باللغة العربية
               </p>
             </li>
           </ul>
