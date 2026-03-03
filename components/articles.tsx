@@ -4,7 +4,13 @@ import Link from "next/link";
 import Heading from "./heading";
 import ArticleCard2 from "./articleCard2";
 import readingTime from "reading-time";
+
 export default function Articles() {
+  blogs.sort((a, b) => {
+    const dateA = new Date(a.publishedAt).getTime();
+    const dateB = new Date(b.publishedAt).getTime();
+    return dateB - dateA;
+  });
   return (
     <section className="flex flex-col gap-10 py-10">
       <div className="flex items-center gap-1">
