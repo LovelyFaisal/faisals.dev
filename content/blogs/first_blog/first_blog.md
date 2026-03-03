@@ -2,7 +2,7 @@
 title: "أول مقالة لي"
 image: "Digital Global Network Map.png"
 publishedAt: 2025-12-6
-isPublished: true
+isPublished: false
 slug: first-article
 category:
     name: "أول مقالة"
