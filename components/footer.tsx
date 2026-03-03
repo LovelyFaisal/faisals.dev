@@ -83,7 +83,7 @@ export default function Footer() {
             ></Link>
           </div>
           <div className="text-[#94A3B8] text-sm flex flex-col md:flex-row gap-3 select-none">
-            <p>© 2025 فيصل الحربي</p>
+            <p>© 2026 فيصل الحربي</p>
             <p className="hidden md:block">.</p>
             <p className="select-text">faisalalharbi9915@gmail.com</p>
             <p className="hidden md:block">.</p>
