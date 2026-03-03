@@ -1,5 +1,29 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## 🚀 فيصل الحربي — موقع شخصي | Personal Portfolio
+**أول قالب موقع شخصي مفتوح المصدر باللغة العربية مبني على Next.js**
+
+## 📺 Demo
+Check out the live version of the project here👇 <br>
+[**faisals.dev**](https://faisals.dev)
+
+## 🛠 Tech Stack
+
+* **Framework:** [Next.js 16] – Leveraged for Server Components and optimal SEO crawling.
+* **Styling:** Tailwind CSS – For a lean, custom UI without the bloat of traditional CSS frameworks.
+* **Animations:** Framer Motion – Implementing "smooth" animation
+* **Content/Data:** [Velite / Markdown] – Decoupled content management for Type-safety.
+
+## ✨ Key Features
+
+* 📑 **Markdown Blog System:** A structured blog powered by Velite, featuring category filtering, reading time calculation, and a "Related Articles" section. Includes basic social sharing tools and a "Copy URL" button.
+* 🌐 **Arabic-First:** Full Right-to-Left Arabic support.
+* 🎯 **Performance First:** Consistent 100/100 Lighthouse scores.
+* 📱 **Fully Responsive:** Mobile-first design architecture.
+* 🔍 **SEO Optimized:** Everything is SSG to ensure Googlebot archives every detail.
+* 📂 **Type-Safe Content:** Integrated with Velite and Zod to ensure all Markdown content follows a strict schema
+* 🌙 **Modern Dark Mode:** A sophisticated, "eye-candy" dark theme
+
 ## Getting Started
 
 First, run the development server:
