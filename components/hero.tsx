@@ -30,7 +30,7 @@ export default function Hero() {
           تحميل السيرة الذاتية
         </a>
         <a
-          href="#projects"
+          href=""
           className="bg-[#0E0E11] py-3 px-6 w-fit rounded-lg font-medium text-sm border border-[#1c1c1c] hover:border-[#292929] transition-colors"
         >
           استعراض المشاريع
