@@ -3,6 +3,12 @@ import Link from "next/link";
 import AnimatedItem from "@/components/animatedItem";
 import ArticleCard2 from "@/components/articleCard2";
 
+blogs.sort((a, b) => {
+  const dateA = new Date(a.publishedAt).getTime();
+  const dateB = new Date(b.publishedAt).getTime();
+  return dateB - dateA;
+});
+
 const categories = [
   ...new Map(
     blogs
