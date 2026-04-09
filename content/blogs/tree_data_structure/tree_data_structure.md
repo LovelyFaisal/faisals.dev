@@ -1,5 +1,5 @@
 ---
-title: كيف سويت نضام تصنيفات في الباك اند؟
+title: كيف سويت نظام تصنيفات في الباك اند؟
 image: Digital Global Network Map.png
 publishedAt: 2026-4-9
 isPublished: true
