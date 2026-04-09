@@ -35,7 +35,7 @@ export default function TestimonialCard({ text, name, field }: CardProps) {
       </div>
       <div className="bg-[#171717] py-2 px-4 flex items-center gap-3">
         <Image
-          src={"/static/testimonial.png"}
+          src={"/testimonial.png"}
           width={48}
           height={48}
           className="rounded-full w-12 h-12 object-cover"

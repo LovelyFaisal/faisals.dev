@@ -20,7 +20,7 @@ export default function Page() {
         </div>
         <div className="grid grid-cols-3 gap-4">
           <Image
-            src="/static/Digital Global Network Map-0a1f992f.png"
+            src="/Digital Global Network Map-0a1f992f.png"
             className="w-full h-[170px] object-cover"
             alt="Picture"
             width={1000}
