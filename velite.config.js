@@ -1,6 +1,7 @@
 import { defineConfig, s } from "velite";
 import rehypeShiki from '@shikijs/rehype'
 import readingTime from "reading-time";
+import rehypeMermaid from 'rehype-mermaid'
 
 // Define the blog schema
 const blog = s
@@ -38,6 +39,9 @@ export default defineConfig({
   markdown: {
     rehypePlugins: [
       [
+        rehypeMermaid, {mermaidConfig: {theme: 'dark'}} // eslint-disable-line @typescript-eslint/no-explicit-any
+      ],
+        [
         rehypeShiki, // eslint-disable-line @typescript-eslint/no-explicit-any
         { theme: "github-dark-default" }
       ]

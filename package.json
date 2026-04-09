@@ -21,11 +21,13 @@
     "motion": "^12.23.12",
     "next": "^16.1.6",
     "npm-run-all": "^4.1.5",
+    "playwright": "^1.59.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icons": "^5.5.0",
     "react-tweet": "^3.3.0",
     "reading-time": "^1.5.0",
+    "rehype-mermaid": "^3.0.0",
     "shiki": "^3.13.0"
   },
   "devDependencies": {
