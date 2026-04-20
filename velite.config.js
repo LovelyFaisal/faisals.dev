@@ -2,6 +2,24 @@ import { defineConfig, s } from "velite";
 import rehypeShiki from "@shikijs/rehype";
 import readingTime from "reading-time";
 
+
+
+
+
+const page = s
+  .object({
+    body: s.markdown(),
+    slug: s.slug('pages'),
+  })
+  .transform((data) => ({
+    ...data,
+    url: `/${data.slug}`,
+  }));
+
+
+
+
+
 // Define the blog schema
 const blog = s
   .object({
@@ -34,6 +52,11 @@ export default defineConfig({
       pattern: "blogs/**/*.md",
       schema: blog,
     },
+    pages: {
+      name: "Pages",
+      pattern: "pages/**/*.md",
+      schema: page,
+    }
   },
   markdown: {
     rehypePlugins: [
