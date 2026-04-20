@@ -7,7 +7,7 @@ export default function Hero() {
         <AnimatedItem delay={0}>
           <h1 className="text-4xl font-bold leading-[1.2]">
             انا <span className="text-primary italic">فيصل الحربي</span> متخصص
-            في تطوير الويب وبناء الحلول الرقمية
+            في هندسة البرمجيات
           </h1>
         </AnimatedItem>
         <AnimatedItem delay={0.2}>
