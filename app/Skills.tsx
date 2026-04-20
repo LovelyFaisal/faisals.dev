@@ -19,10 +19,6 @@ export default function Skills() {
           name: "TypeScript",
           icon: "typescript",
         },
-        {
-          name: "Python",
-          icon: "python",
-        },
       ],
     },
     {
@@ -109,10 +105,6 @@ export default function Skills() {
           name: "Swagger",
           icon: "swagger",
         },
-        {
-          name: "GraphQL",
-          icon: "graphql",
-        },
       ],
     },
   ];
@@ -131,7 +123,7 @@ export default function Skills() {
           return (
             <div
               key={category.name}
-              className="flex flex-col gap-4 px-4 py-3 rounded-xl bg-[#0E0E10] border border-white/5 hover:border-white/20 transition-colors duration-300"
+              className="flex flex-col gap-4 px-4 py-3 rounded-xl border border-white/5 hover:border-white/20 transition-colors duration-300"
             >
               <div className="flex items-center gap-2">
                 <div className="bg-[#171717] p-2 flex items-center justify-center rounded-lg">
