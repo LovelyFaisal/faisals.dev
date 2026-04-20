@@ -2,6 +2,7 @@ import ProjectCard from "@/components/projectCard";
 import { StaticImageData } from "next/image";
 import image1 from "@/assets/projects/theme.png";
 import image2 from "@/assets/projects/vision-landing.png";
+import image3 from "@/assets/projects/tree.png";
 export interface Project {
   title: string;
   image: StaticImageData;
@@ -28,6 +29,15 @@ const projects: Project[] = [
     tags: ["Astro.js", "TypeScript", "Tailwind CSS", "HTML"],
     demo: "https://lovelyfaisal.github.io/vision-landing/",
     github: "https://github.com/lovelyfaisal/vision-landing",
+  },
+  {
+    title: "نظام تصنيفات",
+    image: image3,
+    description:
+      "نظام تصنيفات متقدم باستخدام Java Spring Boot، يوفر واجهة API RESTful لإدارة التصنيفات والمنتجات، مع دعم كامل لعمليات CRUD وعلاقات متعددة المستويات.",
+    tags: ["Java", "Spring Boot", "REST API", "MySQL"],
+    demo: "/blog/tree_data_structure/",
+    github: "https://github.com/lovelyfaisal/category-system",
   },
 ];
 export default function Projects() {
