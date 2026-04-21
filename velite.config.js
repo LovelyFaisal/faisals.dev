@@ -27,6 +27,7 @@ const blog = s
     description: s.string().optional(),
     publishedAt: s.isodate(),
     isPublished: s.boolean().default(true),
+    ltr: s.boolean().default(false),
     body: s.markdown(),
     image: s.image(),
     category: s.object({

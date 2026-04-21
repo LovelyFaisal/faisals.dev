@@ -117,7 +117,7 @@ export default async function Page({ params }: BlogProps) {
 
   return (
     <>
-      <div className="container">
+      <div className="container" dir={blog.ltr ? "ltr" : ""}>
         <ArticleHeader blog={blog} />
 
         <AnimatedItem delay={0.4}>
