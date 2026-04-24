@@ -15,7 +15,7 @@ For example, a platform for TV shows where I need a category for the type of sho
 
 Another example is when I want to make an e-commerce store and I need categories. Example:
 
-How can I build categories in a relational database with only tables and columns?
+How can I build categories in a relational database with only rows and columns?
 
 Should I create a table called category1 and another table called category2 and so on...? It just doesn't work.
 
