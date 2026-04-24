@@ -9,46 +9,30 @@ category:
   name: Backend
   slug: Backend
 ---
+The story began when I noticed that I needed hierarchical data for most of my backend ideas.
 
+For example, a platform for TV shows where I need a category for the type of show, like drama or action, then a subcategory for the country, and then the release year. For instance, Drama > Turkey > 2026
 
+Another example is when I want to make an e-commerce store and I need categories. Example:
 
-the story began when i noticed that i needed hierarchical data for most of my backend ideas
+How can I build categories in a relational database with only tables and columns?
 
-for example, a platform for TV shows where i need category for the type of show like drama or action then a subcategory for the country and then the release year.
-for instance: 
-Drama > Turkey > 2026
+Should I create a table called category1 and another table called category2 and so on...? It just doesn't work.
 
-another example is when I want to make an ecommerce store and I need categories.
-example:
+First, we need to know how to represent the categories in code before thinking about the database. What we're trying to represent isn't just categories; it's called a tree.
 
+Representing the Tree at the Application Level
+A tree is a data structure you might have encountered if you took a data structures course in college. The idea is simple; it's very similar to a linked list.
 
-how can i build categories in a relational database with only tables and columns?
+A linked list is simply a collection of nodes, where each node points to the next node, it's similar to an array, but it solves some of its limitations, such as being dynamic, and having faster insertion and deletion, etc.
 
-do i create a table called category1 and another table called category2 and so on...?
-It just doesn't work
+So if you have a linked list with 2 nodes, it's basically like a tree with only one child.
 
-first , we need to know how to represent the categories in the programming before the database, what we're trying to represent isn't just categories it's called a Tree.
+The difference between a tree and a linked list is that a tree contains nodes where each node points to an array containing the addresses of its children. Now we have a tree!
 
+This tree is called an N-ary tree, meaning each node can have 'n' number of children.
 
-## Representing The tree at The Application Level
-
-a tree is a data structure you might encountered if you took a Data structures course in college.
-The idea is simple, it's very simillar to a linked list
-
-A linked list is simply a collection of nodes, where each node points to the next node, it's similar to an array but it solves some of its limitations
-such as being dynamic in size, and having faster insertion and deletion, etc.
-
-so if you have a linked list with 2 nodes, its basically like a tree with only one child
-
-the difference between a tree and a linked list is that a tree contains nodes
-where each node points to an array containing the addresses of it's children
-now we have a tree!
-
-This tree is called an N-ary tree meaning each node can have 'n' number of children
-
-and this is exactly what we need
-
-unlike the binary tree, where each node is limited to only two children.
+And this is exactly what we need — unlike the binary tree, where each node is limited to only two children.
 
 ```java
 import java.util.ArrayList;
@@ -79,7 +63,7 @@ public class Node<T> {
 ```
 
 
-This is the N-ary tree is represented.
+This is how the N-ary tree is represented.
 
 I used Java, but the representation will be similar in any language that supports OOP, such as JavaScript, Python, PHP, etc., as is the case with most programming languages.
 
@@ -153,13 +137,13 @@ public class ElectronicsStore {
 ```
 
 
-Or simply in JavaScript
+Or simply in JavaScript:
 ```javascript
 const response = JSON.stringify(tree)
 ```
 
 
-libraries use a Depth-First Traversal (DFS) algorithm to traverse the tree's depth and construct the JSON structure.
+These libraries use a Depth-First Traversal (DFS) algorithm to traverse the tree's depth and construct the JSON structure.
 The resulting JSON would look like this:
 
 ```json
@@ -222,8 +206,7 @@ The resulting JSON would look like this:
 
 ## Representing the Tree at the Database Level
 
-But the most critical question remains:
-How do we represent this tree in a relational database? While we have already represented it at the application level, we also need to persist it in the database. There are several approaches to achieving this:
+But the most critical question remains: how do we represent this tree in a relational database? While we have already represented it at the application level, we also need to persist it in the database. There are several approaches to achieving this:
 
 1. Adjacency List
 2. Path Enumeration
@@ -247,27 +230,21 @@ I opted for the Adjacency List method, as it is the most widely used and is suit
 | **7** | MacBook Pro M3     | 3         |
 | **8** | Dell XPS 15        | 3         |
 
-The table includes a parent_id column where each node stores the ID of its parent.
-If the value is NULL,
-it indicates that the node is the Root
-This method is widely popular due to its simplicity.
-Like any other approach,
-it has its own advantages and disadvantages
-which I will discuss in detail at the end of this article.
+The table includes a `parent_id` column where each node stores the ID of its parent. If the value is NULL, it indicates that the node is the root. This method is widely popular due to its simplicity. Like any other approach, it has its own advantages and disadvantages, which I will discuss in detail at the end of this article.
 
-Simlpy we fetch the entire tree:
+Simply, we fetch the entire tree:
 ```sql
 SELECT * FROM categories;
 ```
 
-Now that we have all the data we need, the second most critical question arises: How do we actually build the tree to output it as JSON? In other words, how do we transform these flat database rows into objects like we created earlier, so they are ready for JSON serialization
+Now that we have all the data we need, the second most critical question arises: how do we actually build the tree to output it as JSON? In other words, how do we transform these flat database rows into objects like we created earlier, so they are ready for JSON serialization?
 
 
 
 Usually, we use an ORM. If you've defined the relationships, it will display the tree as JSON, but we'll run into the **N+1 problem**. This happens because the ORM fetches all descendants through multiple queries. For instance, if you have a tree with 10 children, it will execute one query for the root, 10 for the children, and one more to verify that the children have no further descendants resulting in **12 queries**!
 This is a very inefficient approach.
 
-the best way is to fetch the entire tree without letting the ORM build the hierarchy for us.
+The best way is to fetch the entire tree without letting the ORM build the hierarchy for us.
 
 ```java
 List<Category> list = repo.findAll();
@@ -304,7 +281,7 @@ Notice that there is a for-loop iterating through all the nodes. If a node doesn
 
 If you have 10 nodes, and each one needs to search for its parent among those 10
 
-that's 10 * 10 = 100 operations.
+That's 10 * 10 = 100 operations.
 
 But if you have 100 nodes: 100 * 100 = 10,000 operations.
 
@@ -341,13 +318,13 @@ public List<CategoryDTO> getTree(@NonNull List<Category> all) {
 }
 ```
 
-that's the Flat List to Tree Algorithm
+That's the Flat List to Tree Algorithm.
 
 ## Fetching a Sub-tree
 
 ![tree](/tree.png)
 
-Suppose I want to fetch a sub-tree, like 'Mobile Phones' how do I do that? I could pull the entire 'Electronics' tree from the database and then just send the 'Mobile Phones' sub-branch to the user, but what if the database contains thousands of categories?
+Suppose I want to fetch a sub-tree, like 'Mobile Phones' — how do I do that? I could pull the entire 'Electronics' tree from the database and then just send the 'Mobile Phones' sub-branch to the user, but what if the database contains thousands of categories?
 
 The solution is to use **recursion**. Let's assume the 'Mobile Phones' category has an ID = 1. We fetch every row where the parent_id = 1, which would return only 'Samsung' and 'iPhone.' However, since they have descendants, we'd run another query to fetch their children, and so on.
 
@@ -399,13 +376,12 @@ export default function SimpleTree() {
 
 ## Conclusion
 
-I haven't found anyone covering this topic from all from the application layer to the database, converting the tree in the application, and finally displaying it on the frontend.
+I haven't found anyone covering this topic all the way from the application layer to the database, converting the tree in the application, and finally displaying it on the frontend.
 
 Honestly, I’m surprised because it’s a vital topic; any backend engineer will eventually need to represent a tree in a relational database.
 There are articles that discuss the Adjacency List in isolation, and others that talk about the Flat List to Tree algorithm. 
 
-I implemented the Backend in Java (though it can be applied to any language)
-,and I also built the frontend.
+I implemented the backend in Java (though it can be applied to any language), and I also built the frontend.
 
 Backend: [Category system](https://github.com/LovelyFaisal/category-system)
 
