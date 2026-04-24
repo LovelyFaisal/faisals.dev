@@ -277,7 +277,7 @@ public List<CategoryDTO> getTree(@NonNull List<Category> all) {
 ```
 
 
-Notice that there is a for-loop iterating through all the nodes. If a node doesn't have a parent, it's classified as a root and added to the 'roots' list. If it contains a `parent_id`, we need to find the parent to add the child. Should we add a second for-loop? No, absolutely not! That would make the algorithm O(n^2).
+The loop goes through the nodes, adding those without a parent to the ‘roots’ list. For those with a `parent_id`, we find the parent to link them. But should we add a second loop for that? Definitely not—that would drive the complexity to O(n^2).
 
 If you have 10 nodes, and each one needs to search for its parent among those 10
 
