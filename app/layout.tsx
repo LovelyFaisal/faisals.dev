@@ -3,6 +3,7 @@ import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import Footer from "@/components/footer";
 import "./globals.css";
 import Header from "@/components/header";
+import { GoogleAnalytics } from "@next/third-parties/google";
 const IBMPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-52TTV89PZ1" />
     </html>
   );
 }
