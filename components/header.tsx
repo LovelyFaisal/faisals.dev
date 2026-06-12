@@ -7,7 +7,7 @@ const navLinks = [
   // { name: "المشاريع", href: "/projects" },
   { name: "عن فيصل", href: "/about" },
   { name: "كتب", href: "/books" },
-  // { name: "تغريدات", href: "/tweets" },
+  { name: "تغريدات", href: "/tweets" },
 ];
 
 export default function Header() {
