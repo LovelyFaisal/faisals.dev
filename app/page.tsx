@@ -6,6 +6,7 @@ import Projects from "./projects";
 import Aboutme from "@/components/aboutMe";
 import Education from "@/components/education";
 import Contact from "@/components/contact";
+import Free from "./Free";
 export default function Home() {
   return (
     <div className="container">
@@ -14,6 +15,7 @@ export default function Home() {
       <Education />
       <Skills />
       <Articles />
+      <Free />
       <Projects />
       <Contact />
     </div>

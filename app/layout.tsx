@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import "./globals.css";
 import Header from "@/components/header";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 const IBMPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
@@ -26,8 +27,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <GoogleAnalytics gaId="G-52TTV89PZ1" />
       </body>
-      <GoogleAnalytics gaId="G-52TTV89PZ1" />
     </html>
   );
 }
