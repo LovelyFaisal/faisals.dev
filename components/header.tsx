@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ContactButton } from "./ui/button";
 import { MdTerminal } from "react-icons/md";
-
+import logo from "@/assets/projects/logo.png";
+import Image from "next/image";
 const navLinks = [
   { name: "المقالات", href: "/blog" },
   // { name: "المشاريع", href: "/projects" },
@@ -19,9 +20,17 @@ export default function Header() {
     >
       <div className="container flex gap-2 items-center">
         <Link className="flex flex-1 gap-3 text-xl font-bold h-full" href={"/"}>
-          <div className="flex justify-center items-center size-8 rounded bg-primary/20">
-            <MdTerminal size={24} className="text-primary" />
-          </div>
+          {/* <div className="flex justify-center items-center size-8 rounded bg-primary/20"> */}
+          {/* <MdTerminal size={24} className="text-primary" /> */}
+          <Image
+            alt="Products"
+            className="rounded"
+            src={logo}
+            unoptimized
+            width={32}
+            height={32}
+          />
+          {/* </div> */}
           <span className="hidden md:inline">فيصل الحربي</span>
         </Link>
         <nav className="">
