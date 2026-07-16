@@ -1,5 +1,5 @@
 ---
-title: "افضل نضام تشغيل للمبرمجين"
+title: "افضل نظام تشغيل للمبرمجين"
 description: "تحليل عميق حول استخدام لينكس للمبرمجين: هل هو ضرورة أم مجرد ضغط اجتماعي؟"
 image: "Digital Global Network Map.png"
 publishedAt: 2025-10-6
