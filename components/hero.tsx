@@ -27,7 +27,7 @@ export default function Hero() {
           className="bg-blue-500 hover:opacity-80 transition-opacity w-fit rounded-lg py-3 px-6 font-bold text-sm flex items-center gap-2"
         >
           <LuDownload className="" />
-          تحميل السيرة الذاتية999Faisal
+          تحميل السيرة الذاتية
         </a>
         <a
           href="#projects"
