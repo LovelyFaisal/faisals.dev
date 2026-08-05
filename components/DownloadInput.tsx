@@ -65,7 +65,7 @@ export default function DownloadInput({ setIsOpen }: any) {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full cursor-pointer py-2 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 disabled:bg-blue-300 transition"
+            className="w-full cursor-pointer py-2 px-4 bg-primary hover:opacity-80 text-white font-medium rounded-lg disabled:bg-blue-300 transition"
           >
             {status === "submitting"
               ? "جاري الإرسال..."
