@@ -4,10 +4,29 @@ import Footer from "@/components/footer";
 import "./globals.css";
 import Header from "@/components/header";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Script from "next/script";
+
+import localFont from "next/font/local";
+
 const IBMPlexSansArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
+});
+
+const customFont = localFont({
+  src: [
+    {
+      path: "./fonts/thmanyahsans-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/thmanyahsans-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-custom",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${IBMPlexSansArabic.className} antialiased`}>
+      <body className={`${customFont.className} antialiased`}>
         <Header />
         {children}
         <Footer />
