@@ -5,9 +5,9 @@ export default function Hero() {
     <section className="pt-[64px] md:pt-24 md:pb-24 pb-8 flex flex-col gap-8">
       <div className="max-w-[280px] md:max-w-[62%] flex flex-col gap-4">
         <AnimatedItem delay={0}>
-          <h1 className="text-4xl font-bold leading-[1.2]">
-            انا <span className="text-primary italic">فيصل الحربي</span> متخصص
-            في هندسة البرمجيات
+          <h1 className="text-3xl font-bold leading-[1.2]">
+            <span className="text-primary italic">فيصل الحربي</span> — مهندس
+            برمجيات
           </h1>
         </AnimatedItem>
         <AnimatedItem delay={0.2}>
@@ -22,13 +22,19 @@ export default function Hero() {
       gap-4"
       >
         <a
+          href="#projects"
+          className="bg-[#0E0E11] py-3 px-6 w-fit rounded-lg font-medium text-sm border border-[#1c1c1c] hover:border-[#292929] transition-colors"
+        >
+          احجز استشارة
+        </a>
+        {/* <a
           href="/cv.pdf"
           download
           className="bg-blue-500 hover:opacity-80 transition-opacity w-fit rounded-lg py-3 px-6 font-bold text-sm flex items-center gap-2"
         >
           <LuDownload className="" />
           تحميل السيرة الذاتية
-        </a>
+        </a> */}
         <a
           href="#projects"
           className="bg-[#0E0E11] py-3 px-6 w-fit rounded-lg font-medium text-sm border border-[#1c1c1c] hover:border-[#292929] transition-colors"
