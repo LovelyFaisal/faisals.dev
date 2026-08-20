@@ -37,14 +37,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="ar" dir="rtl">
       <body className={`${customFont.className} antialiased`}>
         <Header />
         {children}
+        {modal}
         <Footer />
         <GoogleAnalytics gaId="G-52TTV89PZ1" />
       </body>
