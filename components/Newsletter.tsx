@@ -3,14 +3,11 @@ import Link from "next/link";
 export default function Newsletter() {
   return (
     <div className="Newsletter">
-      <section
-        dir="rtl"
-        className="relative overflow-hidden rounded-2xl border border-[#1c1c1c] bg-gradient-to-bl from-[#0E0E11] via-[#111114] to-[#0E0E11] px-6 py-10 md:px-12 md:py-14"
-      >
+      <section className="relative overflow-hidden rounded-2xl border border-[#1c1c1c] bg-gradient-to-bl from-[#0E0E11] via-[#111114] to-[#0E0E11] px-6 py-10 md:px-12 md:py-14">
         <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-primary/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-16 -right-16 h-48 w-48 rounded-full bg-primary/5 blur-2xl" />
 
-        <div className="relative z-10 flex flex-col items-center gap-6 text-center">
+        <div className="relative z-[5] flex flex-col items-center gap-6 text-center">
           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-[#1c1c1c] bg-[#0E0E11] text-2xl">
             ✉️
           </span>

@@ -102,15 +102,15 @@ export default function Footer() {
           >
             <FaGithub size={16} />
           </Link>
-          <Link
+          {/* <Link
             href="https://www.linkedin.com/in/faisalalharbi9/"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1 hover:opacity-75 transition-opacity"
           >
             <FaLinkedin size={16} />
-          </Link>
-          <FaInstagram size={16} />
+          </Link> */}
+          {/* <FaInstagram size={16} /> */}
         </div>
       </div>
     </div>

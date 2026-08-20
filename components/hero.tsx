@@ -1,6 +1,5 @@
 import AnimatedItem from "./animatedItem";
 import { LuDownload } from "react-icons/lu";
-import Link from "next/link";
 export default function Hero() {
   return (
     <section className="pt-[64px] md:pt-24 md:pb-24 pb-8 flex flex-col gap-8">
@@ -22,19 +21,13 @@ export default function Hero() {
         className="flex flex-col md:flex-row 
       gap-4"
       >
-        <a
+        {/* <a
           href="#projects"
           className="bg-[#0E0E11] py-3 px-6 w-fit rounded-lg font-medium text-sm border border-[#1c1c1c] hover:border-[#292929] transition-colors"
         >
           احجز استشارة
-        </a>
-        <Link
-          href="/login"
-          scroll={false}
-          className="bg-[#0E0E11] py-3 px-6 w-fit rounded-lg font-medium text-sm border border-[#1c1c1c] hover:border-[#292929] transition-colors"
-        >
-          اشترك
-        </Link>
+        </a> */}
+
         {/* <a
           href="/cv.pdf"
           download
