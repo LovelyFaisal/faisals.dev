@@ -9,11 +9,11 @@ const contactLinks = [
     url: "faisalalharbi9915@gmail.com",
     icon: <MdAlternateEmail className="text-primary text-lg" />,
   },
-  {
-    name: "Network",
-    url: "linkedin.com/in/faisalalharbi9",
-    icon: <FaLinkedinIn className="text-primary text-lg" />,
-  },
+  // {
+  //   name: "Network",
+  //   url: "linkedin.com/in/faisalalharbi9",
+  //   icon: <FaLinkedinIn className="text-primary text-lg" />,
+  // },
   {
     name: "Code",
     url: "github.com/LovelyFaisal",
