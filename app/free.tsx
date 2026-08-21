@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import ProductCard from "./productCard";
-import DownloadInput from "@/components/DownloadInput";
+import ProductCard from "./product-card";
+import DownloadInput from "@/components/download-input";
 import { useState, useEffect } from "react";
 export default function Free() {
   const [isOpen, setOpen] = useState(false);

@@ -1,8 +1,8 @@
-import ArticleCard from "./articleCard";
+import ArticleCard from "./article-card";
 import blogs from "@/.velite/blogs.json";
 import Link from "next/link";
 import Heading from "./heading";
-import ArticleCard2 from "./articleCard2";
+import ArticleCard2 from "./article-card2";
 import readingTime from "reading-time";
 
 export default function Articles() {

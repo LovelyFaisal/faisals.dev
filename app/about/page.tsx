@@ -1,5 +1,5 @@
 "use client";
-import AnimatedItem from "@/components/animatedItem";
+import AnimatedItem from "@/components/animated-item";
 import Link from "next/link";
 export default function Page() {
   return (

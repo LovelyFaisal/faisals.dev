@@ -1,11 +1,11 @@
 import blogs from "@/.velite/blogs.json";
 import { notFound } from "next/navigation";
-import AnimatedItem from "@/components/animatedItem";
-import Category from "@/components/morelayout";
+import AnimatedItem from "@/components/animated-item";
+import Category from "@/components/more-layout";
 import Link from "next/link";
 import Heading from "@/components/heading";
 import { FaXTwitter } from "react-icons/fa6";
-import CopyButton from "@/components/copyButton";
+import CopyButton from "@/components/copy-button";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdAccessTime } from "react-icons/md";
 import { CiCalendar } from "react-icons/ci";

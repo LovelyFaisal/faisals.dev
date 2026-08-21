@@ -1,4 +1,4 @@
-import AnimatedItem from "@/components/animatedItem";
+import AnimatedItem from "@/components/animated-item";
 import { Tweet } from "@/components/tweet";
 
 const tweets = [

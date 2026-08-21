@@ -1,4 +1,4 @@
-import AnimatedItem from "./animatedItem";
+import AnimatedItem from "./animated-item";
 import { LuDownload } from "react-icons/lu";
 export default function Hero() {
   return (

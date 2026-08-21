@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AnimatedItem from "@/components/animatedItem";
+import AnimatedItem from "@/components/animated-item";
 import Image from "next/image";
 export default function Page() {
   return (

@@ -1,7 +1,7 @@
 import blogs from "@/.velite/blogs.json";
 import Link from "next/link";
-import AnimatedItem from "@/components/animatedItem";
-import ArticleCard2 from "@/components/articleCard2";
+import AnimatedItem from "@/components/animated-item";
+import ArticleCard2 from "@/components/article-card2";
 
 export default function Page() {
   blogs.sort((a, b) => {

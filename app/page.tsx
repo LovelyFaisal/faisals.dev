@@ -1,13 +1,13 @@
 import Hero from "@/components/hero";
 import Articles from "@/components/articles";
-import Testimonials from "../components/testimonials";
-import Skills from "./Skills";
+import Testimonials from "@/components/testimonials";
+import Skills from "./skills";
 import Projects from "./projects";
-import Aboutme from "@/components/aboutMe";
+import Aboutme from "@/components/about-me";
 import Education from "@/components/education";
 import Contact from "@/components/contact";
-import Free from "./Free";
-import Newsletter from "@/components/Newsletter";
+import Free from "./free";
+import Newsletter from "@/components/newsletter";
 
 export default function Home() {
   return (

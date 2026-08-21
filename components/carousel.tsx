@@ -1,5 +1,5 @@
 "use client";
-import EmblaCarousel from "@/components/EmblaCarousel";
+import EmblaCarousel from "@/components/embla-carousel";
 import { EmblaOptionsType } from "embla-carousel";
 const OPTIONS: EmblaOptionsType = {
   align: "start",

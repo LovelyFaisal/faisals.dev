@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/pageWrapper";
+import PageWrapper from "@/components/page-wrapper";
 export default function Page() {
   return (
     <div className="container">

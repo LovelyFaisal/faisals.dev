@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/projectCard";
+import ProjectCard from "@/components/project-card";
 import { StaticImageData } from "next/image";
 import image1 from "@/assets/projects/theme.png";
 import image2 from "@/assets/projects/vision-landing.png";

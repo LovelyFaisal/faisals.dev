@@ -1,5 +1,5 @@
 import pages from "@/.velite/pages.json";
-import AnimatedItem from "@/components/animatedItem";
+import AnimatedItem from "@/components/animated-item";
 export default async function Page({
   params,
 }: {

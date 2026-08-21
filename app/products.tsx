@@ -1,4 +1,4 @@
-import ProductCard from "./productCard";
+import ProductCard from "./product-card";
 import { FaDatabase } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";

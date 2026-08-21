@@ -1,16 +1,16 @@
 "use client";
 import React, { useCallback } from "react";
 import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
-import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import { DotButton, useDotButton } from "./embla-carousel-dot-button";
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
+} from "./embla-carousel-arrow-buttons";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
-import TestimonialCard from "@/components/testimonialCard";
+import TestimonialCard from "@/components/testimonial-card";
 
 type PropType = {
   slides: number[];

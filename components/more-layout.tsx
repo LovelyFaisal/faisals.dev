@@ -1,6 +1,6 @@
 import blogs from "@/.velite/blogs.json";
-import ArticleCard from "./articleCard";
-import ArticleCard2 from "./articleCard2";
+import ArticleCard from "./article-card";
+import ArticleCard2 from "./article-card2";
 
 export default function Category({
   category,
