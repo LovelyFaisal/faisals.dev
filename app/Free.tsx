@@ -29,11 +29,7 @@ export default function Free() {
       </div>
       <div className="grid md:grid-cols-1 gap-4">
         <ProductCard setIsOpen={setOpen} />
-        {isOpen && (
-          <div className="fixed flex w-full h-full items-center justify-center z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <DownloadInput setIsOpen={setOpen} />
-          </div>
-        )}
+        {isOpen && <DownloadInput setIsOpen={setOpen} />}
       </div>
     </section>
   );
