@@ -36,12 +36,16 @@ export default function Hero() {
           <LuDownload className="" />
           تحميل السيرة الذاتية
         </a> */}
-        <a
+        <AnimatedItem delay={0.3}>
+    <a
           href="#projects"
           className="bg-[#0E0E11] py-3 px-6 w-fit rounded-lg font-medium text-sm border border-[#1c1c1c] hover:border-[#292929] transition-colors"
         >
           استعراض المشاريع
         </a>
+        </AnimatedItem>
+
+    
       </div>
     </section>
   );
