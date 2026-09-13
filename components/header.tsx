@@ -7,7 +7,7 @@ const navLinks = [
   { name: "المقالات", href: "/blog" },
   // { name: "المشاريع", href: "/projects" },
   { name: "عن فيصل", href: "/about" },
-  { name: "كتب", href: "/books" },
+  // { name: "كتب", href: "/books" },
   // { name: "تغريدات", href: "/tweets" },
 ];
 
