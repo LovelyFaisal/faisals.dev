@@ -3,7 +3,7 @@ title: "وهم التعلم الخطي: لماذا تفشل الجامعة في 
 description: نظرة نقدية حول وهم التعلم الخطي في مناهج علوم الحاسب؛ لماذا يبدو التسلسل الأكاديمي منطقياً على الورق، وكيف يبني عقلك المعرفة فعلياً بطريقة شبكية غير مرتبة؟
 image: Digital Global Network Map.png
 publishedAt: 2026-9-13
-isPublished: true
+isPublished: false
 slug: university-fails-programming
 category:
   name: التعلم

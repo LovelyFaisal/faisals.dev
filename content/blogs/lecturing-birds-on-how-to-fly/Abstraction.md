@@ -3,7 +3,7 @@ title: محاضرة تعليم الطيور كيفية الطيران
 description: "يعيد هذا المقال قراءة استعارة «تعليم الطيور كيفية الطيران» لنسيم طالب، ويناقش السؤال: هل نتعلّم من المحاضرات الأكاديمية أم من الممارسة؟"
 image: Digital Global Network Map.png
 publishedAt: 2026-10-10
-isPublished: true
+isPublished: false
 slug: lecturing-birds-on-how-to-fly
 category:
   name: التعلم
